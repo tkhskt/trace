@@ -372,6 +372,46 @@ body{
 }
 
 .icon-container div p {
-    display: inline-block;
     margin-top: 15px;
+}
+
+/*
+7段目
+*/
+.flower-bottom {
+    height: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #3f434a;
+    background: #f0dec5;
+}
+
+.bottom-img-container {
+    flex-grow: 1;
+    height: 100%;
+    width: 50%;
+}
+
+.bottom-bg {
+    float: right;
+    background-image: url('asset/bg_download2.jpg');
+    background-size: contain;
+    background-position: top right;
+    height: 100%;
+    width: 100%;
+}
+
+.bottom-icon-container {
+    flex-grow: 1;
+    width: 50%;
+    text-align: center;
+}
+
+.bottom-icon-container img {
+    margin-top: 5vmin;
+    width: 130px;
+}
+
+.bottom-icon-container p {
+    margin-top: 20px;
 }
