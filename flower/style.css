@@ -39,7 +39,6 @@ body{
     bottom: 40px;
     left: 0;
     right: 0;
-    margin: 0 auto;
     font-size: 13px;
 }
 
@@ -414,4 +413,29 @@ body{
 
 .bottom-icon-container p {
     margin-top: 20px;
+}
+
+footer {
+    height: 45%;
+    background: #3f434a;
+    color: white;
+    position: relative;
+    padding: 5%;
+}
+
+
+.links a {
+    padding: 0 5%
+}
+
+footer .copyright-container {
+    text-align: center;
+}
+
+footer .copyright-container .copyright {
+    position: absolute;
+    bottom: 20%;
+    color: #7e8186;
+    left: 0;
+    right: 0;
 }
