@@ -234,3 +234,108 @@ body{
 .kind-of-flower-description-container div div{
     text-align: left;
 }
+
+/*
+5段目
+*/
+.vase {
+    display: flex;
+    flex-flow: column wrap;
+    height: 850px;
+    color: #3f434a;
+    padding-top: 130px;
+    background: #e8e2df;
+}
+
+.vase-title-container {
+    flex-grow: 1;
+    max-height: fit-content;
+    text-align: center;
+    margin-bottom: 30px;
+    order: 1;
+    width: 50%;
+}
+
+.vase-title-container .vase-title {
+    font-size: 26px;
+}
+
+.vase-title-container p {
+    background: white;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.vase-bg {
+    order: 3;
+    background-image: url('asset/bg_vase.jpg');
+    background-position: bottom center;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+.vase-description-container {
+    order: 2;
+    width: 400px;
+    height: 100%;
+    max-height: fit-content;
+    margin: 0 auto;
+    flex-grow: 1;
+}
+
+
+
+.vase-image-container {
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+.vase-img {
+    position: relative;
+    text-align: center;
+    flex-grow: 1;
+    max-width: 100px;
+}
+
+.vase-img img {
+    width: 100%;
+}
+
+.vase-img p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+}
+
+.special-price-container {
+    margin-top: 30px;
+}
+
+.special-price-container .two-week-info {
+    float: left;
+    border: solid black;
+    padding: 5px 10px;
+}
+
+.special-price-container .two-week-price {
+    margin-left: 20px;
+    float: left;
+    padding: 5px 0;
+}
+
+.special-price-container .two-week-price .special-price {
+    font-size: 20px;
+}
+
+.special-price-container .app-available-notification {
+    clear: both;
+    display: inline-block;
+    margin-top: 20px;
+}
