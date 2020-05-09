@@ -46,14 +46,31 @@ body{
 2段目
 */
 .service-overview {
-    height: 80%;
     display: flex;
     color: white;
+    flex-wrap: wrap;
 }
 
 .service-overview div {
     flex: auto;
     padding: 80px;
+    width: 100%;
+    height: 80vh;
+}
+
+@media (min-width: 960px) {
+    /* .flex-listにflex-wrapを指定してください */
+    .service-overview  {
+        height: 80%;
+        flex-wrap: nowrap;
+    }
+    
+    /* .flex-list li にwidthを50%に指定してください */
+    .service-overview div {
+      height: auto;
+      width: auto;
+    }
+    
 }
 
 .service-overview h2.flower-title{
@@ -87,19 +104,35 @@ body{
 3段目
 */
 .service-convenience {
-    height: 570px;
     color: #3f434a;
     display: flex;
+    flex-wrap: wrap;
     text-align: center;
 }
 
 .service-convenience .service-container {
     flex: auto;
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center; 
     align-items: center;   
+    padding: 15vmin;
+}
+
+@media (min-width: 960px) {
+    /* .flex-listにflex-wrapを指定してください */
+    .service-convenience  {
+        height: 570px;
+        flex-wrap: nowrap;
+    }
+    
+    /* .flex-list li にwidthを50%に指定してください */
+    .service-convenience .service-container {
+      height: auto;
+      width: auto;
+    }
+    
 }
 
 /*
