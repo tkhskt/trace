@@ -339,3 +339,39 @@ body{
     display: inline-block;
     margin-top: 20px;
 }
+
+/*
+6段目
+*/
+.flower-spec {
+    height: 50%;
+    color: #3f434a;
+    padding: 12vmin 4vmin;
+    text-align: center;
+}
+
+.flower-spec > h3 {
+    font-size: 26px;
+}
+
+.icon-container {
+    margin-top: 40px;
+    display: flex;
+}
+
+.icon-container div {
+    flex-grow: 1;
+}
+
+.icon-container div img {
+    height: 80px;
+}
+
+.icon-container div h3 {
+    font-size: 20px;
+}
+
+.icon-container div p {
+    display: inline-block;
+    margin-top: 15px;
+}
