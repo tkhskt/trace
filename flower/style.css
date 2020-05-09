@@ -423,7 +423,6 @@ footer {
     padding: 5%;
 }
 
-
 .links a {
     padding: 0 5%
 }
@@ -432,7 +431,7 @@ footer .copyright-container {
     text-align: center;
 }
 
-footer .copyright-container .copyright {
+footer .copyright {
     position: absolute;
     bottom: 20%;
     color: #7e8186;
