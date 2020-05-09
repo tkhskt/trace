@@ -179,3 +179,58 @@ body{
 /*
 4段目
 */
+.kind-of-flower {
+    height: 720px;
+    display: flex;
+    flex-flow: column wrap;
+    color: #3f434a;
+    padding: 45px;
+    background: #ead5dc;
+}
+
+.flower-kind-bg {
+    background-image: url('asset/bg_flower.jpg');
+    background-size: contain;
+    height: 700px;
+    width: 50%;
+    flex-grow: 1;
+    order: 1;
+}
+
+.flower-kind-title-container {
+    order: 2;
+    text-align: center;
+    width: 50%;
+    flex-grow: 1;
+    max-height: fit-content;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    height: 26px;
+}
+
+.kind-of-flower-title {
+    font-size: 26px;
+}
+
+.kind-of-flower-description-container {
+    margin-top: 30px;
+    order: 3;
+    width: 50%;
+    flex-grow: 1;
+    max-height: fit-content;
+}
+
+.kind-of-flower-description-container div {
+    width: 400px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.kind-of-flower-description-container div h3{
+   font-size: 20px;
+   margin-bottom: 10px;
+}
+
+.kind-of-flower-description-container div div{
+    text-align: left;
+}
