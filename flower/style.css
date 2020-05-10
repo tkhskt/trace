@@ -325,6 +325,7 @@ body{
 
 .vase-description-container {
     max-width: 400px;
+    padding: 0 20px;
     max-height: fit-content;
     margin: 0 auto 80px auto;
     flex-grow: 1;
@@ -382,6 +383,7 @@ body{
 
 .special-price-container {
     margin-top: 30px;
+    min-width: 340px;
 }
 
 .special-price-container .two-week-info {
