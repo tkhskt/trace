@@ -212,8 +212,8 @@ body{
 4段目
 */
 .kind-of-flower {
-    height: 720px;
     display: flex;
+    flex-wrap: wrap;
     flex-flow: column wrap;
     color: #3f434a;
     padding: 45px;
@@ -223,16 +223,37 @@ body{
 .flower-kind-bg {
     background-image: url('asset/bg_flower.jpg');
     background-size: contain;
-    height: 700px;
-    width: 50%;
+    height: 30vh;
+    background-position: center;
     flex-grow: 1;
-    order: 1;
+}
+
+@media (min-width: 960px) {
+
+    .kind-of-flower {
+        height: 720px;
+    }
+
+    .flower-kind-bg  {
+        order: 1;
+        height: 700px;
+        width: 50%;
+    }
+    
+    .flower-kind-title-container  {
+        order: 2;
+        width: 50%;
+    }
+
+    .kind-of-flower-description-container {
+        order: 3;
+        width: 50%;
+    }
+    
 }
 
 .flower-kind-title-container {
-    order: 2;
     text-align: center;
-    width: 50%;
     flex-grow: 1;
     max-height: fit-content;
     margin-top: 100px;
@@ -246,14 +267,12 @@ body{
 
 .kind-of-flower-description-container {
     margin-top: 30px;
-    order: 3;
-    width: 50%;
     flex-grow: 1;
     max-height: fit-content;
 }
 
 .kind-of-flower-description-container div {
-    width: 400px;
+    max-width: 400px;
     margin: 0 auto 40px auto;
     text-align: center;
 }
@@ -273,7 +292,6 @@ body{
 .vase {
     display: flex;
     flex-flow: column wrap;
-    height: 850px;
     color: #3f434a;
     padding-top: 130px;
     background: #e8e2df;
@@ -284,8 +302,6 @@ body{
     max-height: fit-content;
     text-align: center;
     margin-bottom: 30px;
-    order: 1;
-    width: 50%;
 }
 
 .vase-title-container .vase-title {
@@ -300,22 +316,40 @@ body{
 }
 
 .vase-bg {
-    order: 3;
     background-image: url('asset/bg_vase.jpg');
     background-position: bottom center;
-    width: 50%;
-    height: 100%;
+    height: 80vh;
     background-size: cover;
     flex-grow: 1;
 }
 
 .vase-description-container {
-    order: 2;
-    width: 400px;
-    height: 100%;
+    max-width: 400px;
     max-height: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 80px auto;
     flex-grow: 1;
+}
+
+@media (min-width: 960px) {
+
+    .vase {
+        height: 850px;
+    }
+
+    .vase-bg  {
+        order: 3;
+        height: 100%;
+        width: 50%;
+    }
+    
+    .vase-title-container  {
+        width: 50%;
+        order: 1;
+    }
+
+    .vase-description-container {
+        order: 2;
+    }
 }
 
 
@@ -376,7 +410,6 @@ body{
 6段目
 */
 .flower-spec {
-    height: 50%;
     color: #3f434a;
     padding: 12vmin 4vmin;
     text-align: center;
@@ -389,10 +422,19 @@ body{
 .icon-container {
     margin-top: 40px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .icon-container div {
     flex-grow: 1;
+    margin-top: 30px;
+}
+
+@media (min-width: 960px) {
+
+    .flower-spec {
+        height: 50%;
+    }
 }
 
 .icon-container div img {
@@ -411,7 +453,6 @@ body{
 7段目
 */
 .flower-bottom {
-    height: 420px;
     display: flex;
     flex-wrap: wrap;
     color: #3f434a;
@@ -420,22 +461,22 @@ body{
 
 .bottom-img-container {
     flex-grow: 1;
-    height: 100%;
-    width: 50%;
+    height: 40vh;
+    width: 100%;
 }
 
 .bottom-bg {
     float: right;
     background-image: url('asset/bg_download2.jpg');
     background-size: contain;
-    background-position: top right;
+    background-position: bottom center;
     height: 100%;
     width: 100%;
 }
 
 .bottom-icon-container {
     flex-grow: 1;
-    width: 50%;
+    margin-top: 5vmin;
     text-align: center;
 }
 
@@ -448,6 +489,32 @@ body{
     margin-top: 20px;
 }
 
+@media (min-width: 960px) {
+
+    .flower-bottom {
+        height: 420px;
+    }
+
+    .bottom-bg {
+        background-position: bottom right;
+    }
+
+    .bottom-icon-container{
+        order: 2;
+        width: 50%;
+    }
+
+    .bottom-img-container{
+        order: 1;
+        width: 50%;
+        height: 100%;
+    }
+}
+
+/*
+footer
+*/
+
 footer {
     height: 45%;
     background: #3f434a;
@@ -456,8 +523,16 @@ footer {
     padding: 5%;
 }
 
-.links a {
-    padding: 0 5%
+.links li {
+    list-style: none;
+    padding: 5px 5%;
+}
+
+@media (min-width: 960px) {
+
+    .links li  {
+        display: inline;
+    }
 }
 
 footer .copyright-container {
