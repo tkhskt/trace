@@ -78,6 +78,7 @@ gulp.task('reload', (done) => {
   done();
 });
 
+// ファイル監視(doneする)
 gulp.task('watch', (done) => {
   gulp.watch('./src/assets/sass/*.sass', gulp.task('sass'));
   gulp.watch('./src/index.html', gulp.series('copy', 'reload'));
