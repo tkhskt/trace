@@ -23,7 +23,7 @@ gulp.task('copy', () => {
   return gulp
     .src(srcDir + '/index.html')
     .pipe(plumber())
-    .pipe(gulp.dest(dstDir))
+    .pipe(gulp.dest('dist'))
     .pipe(browserSync.stream());
 });
 
