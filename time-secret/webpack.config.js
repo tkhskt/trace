@@ -7,7 +7,7 @@ module.exports = {
   output: {
     // バンドル先
     filename: 'bundle.js',
-    path: path.join(__dirname, 'dist/js'),
+    path: path.join(__dirname, './dist/js'),
   },
   optimization: {
     minimizer: [

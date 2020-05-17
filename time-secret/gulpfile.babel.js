@@ -10,11 +10,9 @@ import webpackConfig from './webpack.config';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 
-// 出力先
+const bs = browserSync.create();
 
 // FIXME gulp.taskのタスク定義のやり方は古いらしい
-
-// 圧縮前と圧縮後のディレクトリを定義
 
 const srcDir = 'src';
 const dstDir = './dist/assets';
@@ -24,7 +22,7 @@ gulp.task('copy', () => {
     .src(srcDir + '/index.html')
     .pipe(plumber())
     .pipe(gulp.dest('dist'))
-    .pipe(browserSync.stream());
+    .pipe(bs.stream());
 });
 
 // sassをコンパイルしてcss圧縮
@@ -47,7 +45,7 @@ gulp.task('sass', () => {
         sourcemaps: true,
       })
     )
-    .pipe(browserSync.stream());
+    .pipe(bs.stream());
 });
 
 // いろんな拡張子を圧縮するためのオプション
@@ -75,22 +73,28 @@ gulp.task('webpack', () => {
     .pipe(gulp.dest(dstDir + '/js'));
 });
 
-gulp.task('watch', () => {
-  gulp.watch('./src/assets/sass/*.sass', gulp.task('sass'));
-  gulp.watch('./src/index.html').on('change', browserSync.reload);
+gulp.task('reload', (done) => {
+  browserSync.reload();
   done();
 });
 
+gulp.task('watch', (done) => {
+  gulp.watch('./src/assets/sass/*.sass', gulp.task('sass'));
+  gulp.watch('./src/index.html', gulp.series('copy', 'reload'));
+  done();
+});
+
+// サーバー立ち上げ(doneするとerror)
 gulp.task('serve', () => {
-  browserSync.init({
-    server: dstDir,
+  bs.init({
+    server: './dist',
   });
 });
 
 // webpack追加
 gulp.task(
   'default',
-  gulp.series('copy', 'sass', 'imagemin', 'webpack', 'serve', 'watch', function (done) {
+  gulp.series('copy', 'sass', 'imagemin', 'webpack', 'watch', 'serve', function (done) {
     done();
   })
 );
