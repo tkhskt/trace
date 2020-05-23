@@ -28,7 +28,8 @@ gulp.task('copy', () => {
 // sassをコンパイルしてcss圧縮
 gulp.task('sass', () => {
   return gulp
-    .src('./src/assets/sass/*.sass', {
+    .src('./src/assets/sass/**/*.scss', {
+      base: './src/assets/sass',
       sourcemaps: true,
     })
     .pipe(plumber())
@@ -80,7 +81,8 @@ gulp.task('reload', (done) => {
 
 // ファイル監視(doneする)
 gulp.task('watch', (done) => {
-  gulp.watch('./src/assets/sass/*.sass', gulp.task('sass'));
+  gulp.watch('./src/assets/sass/**/*.scss', gulp.task('sass'));
+  gulp.watch('./src/assets/js/*.js', gulp.task('webpack'));
   gulp.watch('./src/index.html', gulp.series('copy', 'reload'));
   done();
 });
