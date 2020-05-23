@@ -32,7 +32,14 @@ gulp.task('sass', () => {
       base: './src/assets/sass',
       sourcemaps: true,
     })
-    .pipe(plumber())
+    .pipe(
+      plumber({
+        errorHandler: function (err) {
+          console.log(err.messageFormatted);
+          this.emit('end');
+        },
+      })
+    )
     .pipe(sass({ outputStyle: 'compressed' })) // 圧縮
     .pipe(
       postcss([
@@ -97,7 +104,7 @@ gulp.task('serve', () => {
 // webpack追加
 gulp.task(
   'default',
-  gulp.series('copy', 'sass', 'imagemin', 'webpack', 'watch', 'serve', function (done) {
+  gulp.series('sass', 'imagemin', 'webpack', 'copy', 'watch', 'serve', function (done) {
     done();
   })
 );

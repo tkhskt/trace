@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "ress": "^2.0.4",
     "swiper": "^5.4.1"
   },
   "devDependencies": {

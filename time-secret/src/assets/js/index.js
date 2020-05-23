@@ -1,8 +1,8 @@
 import Swiper from 'swiper';
 
 new Swiper('.swiper-container', {
-  slidesPerView: 1,
-  spaceBetween: 30,
+  slidesPerView: 5,
+  spaceBetween: 10,
   loop: true,
   pagination: {
     el: '.swiper-pagination',
