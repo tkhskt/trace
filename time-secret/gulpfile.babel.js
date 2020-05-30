@@ -77,7 +77,14 @@ gulp.task('imagemin', () => {
 
 gulp.task('webpack', () => {
   return gulpWebpack(webpackConfig, webpack)
-    .pipe(plumber())
+    .pipe(
+      plumber({
+        errorHandler: function (err) {
+          console.log(err.messageFormatted);
+          this.emit('end');
+        },
+      })
+    )
     .pipe(gulp.dest(dstDir + '/js'));
 });
 
