@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 
-new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1.5,
   spaceBetween: 50,
   loop: true,
@@ -15,8 +15,18 @@ new Swiper('.swiper-container', {
   },
   breakpoints: {
     1800: {
-      slidesPerView: 5.5,
+      cssWidthAndHeight: true,
+      slidesPerView: 'auto',
       spaceBetween: 50,
+      visibilityFullFit: true,
+      autoResize: false,
+    },
+  },
+  on: {
+    beforeResize() {
+      if (window.innerWidth >= 1800) {
+        swiper.slides.css('width', '');
+      }
     },
   },
 });
