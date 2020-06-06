@@ -1,4 +1,7 @@
 import Swiper from 'swiper';
+import drawer from './drawer';
+
+drawer();
 
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1.5,
