@@ -17,15 +17,46 @@
     <header>
       <img src="./assets/img/logo.png" class="logo" />
       <div class="button-container">
-        <div id="drawer-button" class="menu-trigger">
+        <div id="drawer-button" class="menu-trigger" aria-expanded="false" aria-controls="drawer">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </div>
     </header>
-    <div class="drawer">
-      <nav></nav>
+    <div id="drawer" class="drawer" aria-expanded="false">
+      <div class="drawer-background"></div>
+      <nav>
+        <img src="./assets/img/logo.png" class="nav-logo" />
+        <ul class="items">
+          <li class="primer item">
+            <p>ミネラルプライマーベース</p>
+          </li>
+          <li class="pressed item">
+            <p>ミネラルプレストパウダー</p>
+          </li>
+          <li class="clear item">
+            <p>ミネラルプレストクリアベール</p>
+          </li>
+          <li class="finish item">
+            <p>ミネラルフィニッシュパウダー</p>
+          </li>
+          <li class="fix item">
+            <p>フィックスミスト / フィックスミスト コラーゲン</p>
+          </li>
+        </ul>
+        <div class="links">
+          <p>TOPICS</p>
+          <p>SHOPLIST</p>
+        </div>
+        <div class="store">
+          <p class="store-title">ONLINE STORE</p>
+          <ul class="stores">
+            <li>OFFICIAL ONLINE STORE</li>
+            <li>RAKUTEN STORE</li>
+          </ul>
+        </div>
+      </nav>
     </div>
     <main>
       <!--トップ-->
