@@ -1,0 +1,64 @@
+@import 'vendor/ress';
+
+$container-margin: 5vmin;
+$container-wmax: 1800px;
+$primary-color: #0a0a0a;
+$accent-color: #d2d2d2;
+$gray-light: #ababab;
+
+$letter-space: 0.1em;
+
+$breakpoints: (
+  'sm': 'screen and (min-width: 400px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 1000px)',
+  'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+p,
+a {
+  color: $primary-color;
+}
+
+header {
+  position: relative;
+  height: 500px;
+  padding: 50px;
+  .title-container {
+    position: absolute;
+    left: 5vw;
+  }
+  .links {
+    position: absolute;
+    right: 5vw;
+    display: flex;
+    .link {
+      margin-left: 50px;
+      a {
+        position: relative;
+      }
+      a::after {
+        display: block;
+        position: absolute;
+        content: '';
+        bottom: -5px;
+        width: 0%;
+        left: 0;
+        height: 2px;
+        background-color: $primary-color;
+        transition: all 0.2s;
+      }
+      a:hover::after {
+        width: 100%;
+        opacity: 1;
+        transition: all 0.2s;
+      }
+    }
+  }
+}
