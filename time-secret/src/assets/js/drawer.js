@@ -10,5 +10,6 @@ export default () => {
     drawerOpened = !drawerOpened;
     drawerNav.setAttribute('aria-expanded', `${drawerOpened}`);
     main.classList.toggle('drawer-opened');
+    console.log('aaaaaaaaaa');
   });
 };
